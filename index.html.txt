@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的品牌網站 | 專屬您的解決方案</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 基礎樣式設定 */
+        :root {
+            --primary-color: #00b900; /* LINE 綠色風格，可自行修改 */
+            --dark-color: #333;
+            --light-color: #f4f4f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #fff;
+        }
+
+        /* 導覽列 */
+        header {
+            background: #fff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-color);
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 主視覺區塊 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        /* 服務內容區塊 */
+        .section {
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            padding: 30px;
+            background: var(--light-color);
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* 聯絡我們 */
+        .footer {
+            background: var(--dark-color);
+            color: #fff;
+            padding: 40px 10%;
+            text-align: center;
+        }
+
+        /* 行動裝置優化 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav { display: none; } /* 手機版建議改用漢堡選單，此處先簡化 */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">BRAND LOGO</div>
+        <nav>
+            <a href="#services">服務項目</a>
+            <a href="#about">關於我們</a>
+            <a href="#contact">聯繫我們</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>在這裡輸入你的響亮口號</h1>
+        <p>提供一段吸引人的簡介，讓客戶一眼就知道你的價值。</p>
+        <a href="https://line.me/R/ti/p/@your_id" class="cta-button">立即諮詢（加好友）</a>
+    </section>
+
+    <section id="services" class="section">
+        <h2>我們的專業服務</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>專業諮詢</h3>
+                <p>針對您的需求提供一對一的深度分析與策略建議。</p>
+            </div>
+            <div class="card">
+                <h3>快速開發</h3>
+                <p>運用最先進的技術，縮短產品上線的時間。</p>
+            </div>
+            <div class="card">
+                <h3>售後支持</h3>
+                <p>完整的教育訓練與 24/7 的技術支援服務。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section" style="background-color: var(--light-color);">
+        <h2>關於我們</h2>
+        <p style="max-width: 800px; margin: 20px auto;">
+            我們是一群熱愛創新的團隊，致力於透過數位工具協助企業轉型。無論是廣告投放、網站架設還是品牌經營，我們都能提供最精準的解決方案。
+        </p>
+    </section>
+
+    <footer id="contact" class="footer">
+        <p>© 2026 您的品牌名稱. All rights reserved.</p>
+        <p>地址：台北市某某區某某路 88 號 | 電話：02-1234-5678</p>
+    </footer>
+
+</body>
+</html>
